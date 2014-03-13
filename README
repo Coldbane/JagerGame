@@ -1,0 +1,22 @@
+Simple experiments using UDKInstall-2013-07.exe
+
+features:
+* 	thirdperson free camera with zoom and shouldercam mode
+	(A free third person camera that moves freely from the
+	player character and allows the character to face/look
+	independent of the camera. Also allows camera to zoom in
+	and out and have collision with the environment to prevent
+	clipping.)
+
+* 	target lockon system 
+	(Button functionality to target lock enemies and make
+	player face target. Allows for cycling of targets.)
+
+* 	stamina and stamina recovery system
+	(A sprinting system that allows the player to move quicker
+	than normal speed and uses stamina to control use of the
+	sprinting.)
+
+* 	basic custom AI
+	(kismet is not needed, but needs tweaks)
+

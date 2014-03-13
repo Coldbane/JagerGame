@@ -62,3 +62,7 @@ UDKGame/ProjectTemplates/
 UDKGame/PTOC*
 UDKGame/Script/
 UDKGame/Unpublished/
+UDKGame/Config/UDKEditor.ini
+UDKGame/Config/UDKEditorUserSettings.ini
+UDKGame/Config/UDKEngine.ini
+UDKGame/Config/UDKEditor.ini
