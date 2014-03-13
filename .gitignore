@@ -1,0 +1,64 @@
+# File Types known to be unecessary
+*.swp
+*.bin
+*.checkpoint
+*ShaderCache*
+*PCTOC*
+*.log
+*.obj
+*IphoneTOC*
+*.dmp
+*.u
+ 
+# Exclude parts of the directory hierarchy that contain foundation/shared item
+# Please keep an eye out if you find yourself changing these items
+Binaries/
+ 
+Development/Flash/AS2/CLIK/
+Development/Flash/AS3/CLIK/
+ 
+Development/Intermediate/
+ 
+Development/Src/Core
+Development/Src/Engine
+Development/Src/ExoEditor
+Development/Src/GFxUI
+Development/Src/GFxUIEditor
+Development/Src/GameFramework
+Development/Src/IpDrv
+Development/Src/MyMod
+Development/Src/OnlineSubsystemGameCenter
+Development/Src/OnlineSubsystemPC
+Development/Src/OnlineSubsystemSteamworks
+Development/Src/SubstanceAir
+Development/Src/SubstanceAirEd
+Development/Src/SwordEditor
+Development/Src/UDKBase
+Development/Src/UnrealEd
+Development/Src/UTEditor
+Development/Src/UTGame
+Development/Src/UTGameContent
+Development/Src/WinDrv
+ 
+Engine/
+ 
+# Note that this assumes you are creating a new folder for holding your content
+# and you do NOT want to store the existing demo content
+# If you uncomment one of these, your repo might get very large
+UDKGame/Content/Maps/
+UDKGame/Content/Mobile/
+UDKGame/Content/Shared/
+UDKGame/Content/Showcases/
+UDKGame/Content/TestPackages/
+UDKGame/Content/UT3/
+ 
+UDKGame/Autosaves/
+UDKGame/Build/
+UDKGame/CookedIPhone/
+UDKGame/CookedPC/
+UDKGame/Localization/
+UDKGame/Movies/
+UDKGame/ProjectTemplates/
+UDKGame/PTOC*
+UDKGame/Script/
+UDKGame/Unpublished/
