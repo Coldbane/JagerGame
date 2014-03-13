@@ -14,10 +14,10 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
     //Declaring local variables
     local vector            Loc, Pos, HitLocation, HitNormal;
     local rotator           Rot;
-    local Actor                     HitActor;
+    local Actor             HitActor;
     local CameraActor       CamActor;
-    local bool                      bDoNotApplyModifiers;
-    local TPOV                      OrigPOV;
+    local bool              bDoNotApplyModifiers;
+    local TPOV              OrigPOV;
 
     // store previous POV, in case we need it later
     OrigPOV = OutVT.POV;
@@ -41,9 +41,9 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
     }
     else
     {
-        // Give Pawn Viewtarget a chance to dictate the camera position.
-        // If Pawn doesn't override the camera view, then we proceed with our own defaults
-        if( Pawn(OutVT.Target) == None || !Pawn(OutVT.Target).CalcCamera(DeltaTime, OutVT.POV.Location, OutVT.POV.Rotation, OutVT.POV.FOV) )
+    // Give Pawn Viewtarget a chance to dictate the camera position.
+    // If Pawn doesn't override the camera view, then we proceed with our own defaults
+    if( Pawn(OutVT.Target) == None || !Pawn(OutVT.Target).CalcCamera(DeltaTime, OutVT.POV.Location, OutVT.POV.Rotation, OutVT.POV.FOV) )
         {
             // don't apply modifiers when using these debug camera modes. 
             bDoNotApplyModifiers = TRUE;
@@ -79,7 +79,6 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
                 }
 
                 //OutVT.Target.GetActorEyesViewPoint(Loc, Rot);
-
                 if(CameraStyle == 'FreeCam')
                 {
                     Rot = PCOwner.Rotation;
@@ -87,20 +86,24 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
 
                 Loc += FreeCamOffset >> Rot;
                 Loc.Z += Z; // Setting the Z coordinate offset for shoulder view
-
+    
                 //Linear interpolation algorithm. This is the "smoothing," so the camera doesn't jump between zoom levels
                 if (Dist != FreeCamDistance)
                 {
                     Dist = Lerp(Dist,FreeCamDistance,0.15); //Increment Dist towards FreeCamDistance, which is where you want your camera to be. Increments a percentage of the distance between them according to the third term, in this case, 0.15 or 15%
                 }
+
+
                 if (Z != TargetZ)
                 {
                     Z = Lerp(Z,TargetZ,0.1);
                 }
+            
                 if (DefaultFOV != TargetFOV)
                 {
                     DefaultFOV = Lerp(DefaultFOV,TargetFOV,0.1);
                 }
+            
                 if (Offset != TargetOffset)
                 {
                     Offset = Lerp(Offset,TargetOffset,0.1);
@@ -131,7 +134,6 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
     if( !bDoNotApplyModifiers )
     {
         // Apply camera modifiers at the end (view shakes for example)
-
         ApplyCameraModifiers(DeltaTime, OutVT.POV);
     }
     //`log( WorldInfo.TimeSeconds  @ GetFuncName() @ OutVT.Target @ OutVT.POV.Location @ OutVT.POV.Rotation @ OutVT.POV.FOV );
@@ -139,6 +141,6 @@ function UpdateViewTarget(out TViewTarget OutVT, float DeltaTime)
 
 DefaultProperties
 {
-    FreeCamDistance = 256.f
+    FreeCamDistance = 160.f
     pival = 3.14159;
 }

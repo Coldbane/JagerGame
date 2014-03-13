@@ -65,3 +65,12 @@ UDKGame/Unpublished/
 UDKGame/Config/UDKEditor.ini
 UDKGame/Config/UDKEditorUserSettings.ini
 UDKGame/Config/UDKEngine.ini
+UDKGame/Content/GameAssetDatabase_backup.journal
+UDKGame/Content/GameAssetDatabase.journal
+UDKGame/Config/UDKWeapon.ini
+UDKGame/Config/UDKStaticMeshEditor_layoutAUI_INT.txt
+UDKGame/Config/UDKMaterialEditor_layoutAUI_INT.txt
+UDKGame/Config/UDKEditorKeyBindings.ini
+UDKGame/Config/UDKCharInfo.ini
+UDKGame/Cloud/CloudStorage.ini
+UDKGame/Config/UDKEditorUserSettings.ini
